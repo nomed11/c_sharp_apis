@@ -1,85 +1,67 @@
-API Development with C# and ASP.NET Core
-========================================
+# API Development with C# and ASP.NET Core
 
 This repository contains a comprehensive example of a RESTful API built with C# and ASP.NET Core, showcasing best practices in API design and development.
 
-Project Overview
-----------------
+## Project Overview
 
 This API project demonstrates:
 
--   **RESTful API principles** for creating scalable and maintainable endpoints.
--   **Entity Framework Core** for streamlined data persistence.
--   **Controller setup and OpenAPI integration** for automated API documentation.
--   **Validation and error handling** for reliable user interactions.
--   **Middleware and Dependency Injection** to support modularity and maintainability.
--   **Database migrations and data seeding** for a seamless database setup.
+- **RESTful API principles** for creating scalable and maintainable endpoints.
+- **Entity Framework Core** for streamlined data persistence.
+- **Controller setup and OpenAPI integration** for automated API documentation.
+- **Validation and error handling** for reliable user interactions.
+- **Middleware and Dependency Injection** to support modularity and maintainability.
+- **Database migrations and data seeding** for a seamless database setup.
 
-Technologies Used
------------------
+## Technologies Used
 
--   **C# and .NET Core**
--   **ASP.NET Core**
--   **Entity Framework Core**
--   **SQLite** (or another database of your choice)
--   **XUnit** for testing
--   **Swagger/OpenAPI** for API documentation
+- **C# and .NET Core**
+- **ASP.NET Core**
+- **Entity Framework Core**
+- **SQLite** (or another database of your choice)
+- **XUnit** for testing
+- **Swagger/OpenAPI** for API documentation
 
-Installation and Setup
-----------------------
+## Installation and Setup
 
-1.  **Clone the repository**:
+1. **Clone the repository**:
 
-    bash
+```bash
+git clone https://github.com/yourusername/aspnetcore-api-project.git
+cd aspnetcore-api-project
+```
 
-    Copy code
+2. **Install dependencies**:
 
-    `git clone https://github.com/yourusername/aspnetcore-api-project.git
-    cd aspnetcore-api-project`
+```bash
+dotnet restore
+```
 
-2.  **Install dependencies**:
+3. **Set up the database**:
+   - Update `appsettings.json` with your database configuration.
+   - Run migrations:
 
-    bash
+```bash
+dotnet ef database update
+```
 
-    Copy code
+4. **Run the application**:
 
-    `dotnet restore`
+```bash
+dotnet run
+```
 
-3.  **Set up the database**:
+5. **Access API Documentation**:
+   - Visit `http://localhost:<port>/swagger` for the OpenAPI documentation provided by Swagger.
 
-    -   Update `appsettings.json` with your database configuration.
-    -   Run migrations:
-
-        bash
-
-        Copy code
-
-        `dotnet ef database update`
-
-4.  **Run the application**:
-
-    bash
-
-    Copy code
-
-    `dotnet run`
-
-5.  **Access API Documentation**:
-
-    -   Visit `http://localhost:<port>/swagger` for the OpenAPI documentation provided by Swagger.
-
-Usage
------
+## Usage
 
 The API provides endpoints to manage a variety of resources, following REST principles. Refer to the Swagger UI for detailed information on each endpoint.
 
-Testing
--------
+## Testing
 
 To execute tests, use:
 
-bash
-
-Copy code
-
-`dotnet test`
+```bash
+dotnet test
+```
